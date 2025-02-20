@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-container{
+    position: fixed;
+    z-index: 100;
+    padding: 7px 0 7px 0;
+    width: 100%;
+    backdrop-filter: blur(10px) saturate(10%);
+    background-color: #050e2086;
+}
+.nav-sep{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 65px 10px 65px;
+    align-items: center;
+    color: white;
+}
+.nav-bars{
+    display: flex;
+    gap: 40px;
+    }
+.nav-links{
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace ;
+    }
