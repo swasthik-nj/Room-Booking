@@ -13,7 +13,7 @@ export default function Navbar() {
                     </h1>
                 </div>
             <div className="nav-bars">
-                <Link className='nav-links' to={'/'}>Home</Link>
+                <Link className='nav-links' to={'/home'}>Home</Link>
                 <Link className='nav-links' to={'/about'}>About</Link>
                 <Link className='nav-links' to={'/book'}>Book Now</Link>
                 <Link className='nav-links' to={'/contact'}>Contact Us</Link>
