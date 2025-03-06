@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -205,8 +206,9 @@
   place-items: center;
   gap: 10px;
   padding: 20px 65px 20px 65px;
-  background-image: linear-gradient(#122346, #1e3c77);
+  background-image: linear-gradient(#122346, #0c265b);
 }
+
 .first-room {
   background-color: rgb(200, 199, 199);  
   padding: 1rem 1.3rem;
@@ -217,6 +219,16 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+@media screen and (max-width: 1280px){
+  .first-room {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 1190px){
+  .first-room {
+    width: 15rem;
+  }
 }
 
 .home-imgs {
@@ -263,3 +275,67 @@
   /* background-color: rgb(20, 181, 5); */
   box-shadow: 0 3px 16px 2px rgb(133, 132, 132);
 }
+
+.rec-container{
+  background-image: linear-gradient(#0c265b, #122346);
+}
+
+.imgs-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(27, 1fr);
+  position: relative; 
+}
+
+  .imgs-grid .grid img {
+    border-radius: 20px;
+    max-width: 100%; 
+  }
+  .imgs-grid .grid.grid-1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 18;
+    grid-column: 1 / span 18;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 27;
+    grid-row: 1 / span 27; 
+  }
+
+    .imgs-grid .grid.grid-2 {
+      -ms-grid-column: 19;
+      -ms-grid-column-span: 27;
+      grid-column: 19 / span 27;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 5;
+      grid-row: 1 / span 5;
+      padding-left: 20px; 
+    }
+
+      .imgs-grid .grid.grid-3 {
+        -ms-grid-column: 14;
+        -ms-grid-column-span: 16;
+        grid-column: 14 / span 16;
+        -ms-grid-row: 6;
+        -ms-grid-row-span: 27;
+        grid-row: 6 / span 27;
+        padding-top: 20px; 
+      }
+.imgs-grid .grid {
+      position: relative; }
+      .img-holder{
+        width: 40%;
+      }
+      .active-sep{
+        width: 100%;
+        display: flex;
+        margin-top: 90px;
+        justify-content: center;
+      }
+      .h2-sub-food{
+        line-height: 35px;
+        /* margin-left: ; */
+        width: 100%;
+        color: #a3a6a7;
+        font-size: 20px;
+        font-family: "Tangerine", cursive;
+        font-weight: 300;     
+      }

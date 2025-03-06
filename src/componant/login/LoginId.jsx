@@ -32,10 +32,11 @@ export default function LogIn() {
   };
   return (
     
-    <div>
-      <h1>Log in</h1>
+    <div style={{height:"100vh",backgroundColor:"#050e20",color:"white",display:"flex",justifyContent:"center",alignItems:"center"}}>
+      <div style={{backgroundColor:"#31342bae",border:"1px solid white",padding:"40px",borderRadius:"20px"}}>
+      <h1 style={{paddingBottom:"50px",fontSize:"50px"}}>Log in</h1>
       
-      {message && <span>{message}</span>}
+      
       <form action="" onSubmit={handleSubit}>
         
         <table>
@@ -68,8 +69,11 @@ export default function LogIn() {
           <br />
         </table>
       </form>
+      {message && <span>{message}</span>}<br></br>
       <span>Don't have a account ?</span>
       <Link to={'/'}>Sign In</Link>
+      </div>
+      
     </div>
   );
 }

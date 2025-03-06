@@ -126,6 +126,58 @@ export default function Home() {
       </div>
       </div>
      
+{/* recipe container */}
+
+      <div className="rec-container">
+      <h1 style={{backgroundColor:"#0c265b",color:"#dbd3f4",fontSize:"68px",paddingLeft:"40px",paddingTop:"80px"}}> Explore Our Delicious Options 🍽️!</h1>
+
+
+      <div className="active-sep">
+        <div
+          style={{
+            height: "80vh",
+            width: "35%",
+            // alignItems: "center",
+            // paddingTop:"80px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ width: "480px",marginTop:"0px" }}>
+            <h1
+              style={{
+                padding: "5px 0 40px 0",  
+                fontSize: "50px",
+                color: "#06c222",
+                transform:"rotate(-5deg)"
+              }}
+            >
+              Food Makes Your
+              <span style={{ fontSize: "65px", color: "#88af3b",paddingLeft:"10px"}}>
+                Happiness
+              </span>
+            </h1>
+            <h2 className="h2-sub-food">
+            Our food facility offers a wide variety of delicious and freshly prepared meals to satisfy every craving. From wholesome breakfast options to hearty lunches and flavorful snacks, we have something for everyone. We prioritize hygiene, quality, and freshness, ensuring every bite is both tasty and nutritious.
+            </h2>
+          </div>
+        </div>
+
+
+
+
+        <div class="img-holder">
+						<div class="imgs-grid">
+							<div class="grid grid-1"><img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"></img></div>
+							<div class="grid grid-2"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/08/Corndogs-7832ef6.jpg?quality=90&resize=556,505"></img></div>
+							<div class="grid grid-3"><img src="https://thumbs.dreamstime.com/b/navratri-upwas-thali-fasting-food-platter-consumed-ekadashi-india-hindu-religion-includes-sago-khichadi-aloo-sabji-159829566.jpg"></img></div>
+						</div>
+					</div>
+        
+      </div>
+      
+    
+    </div>
     </div>
   );
 }

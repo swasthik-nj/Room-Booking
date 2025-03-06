@@ -33,6 +33,50 @@ const ContactForm = () => {
   return (
     <div className="form-container">
       <div className="content-wrapper">
+{/* Room Details Section */}
+<div style={{width:"fit-content"}}>
+        
+
+        <div className="room-details">
+          <h1>Room Details</h1>
+          <div style={{display:"flex", gap:"10px"}}>
+          <div className="room-img">
+            <img className='room-img' src={booking.images} alt="" srcset="" />
+          </div>
+          <div className="room-info">
+            <h3>{booking.roomType}</h3>
+            <div style={{display:"flex",fontSize:"14px"}}>
+            <p>{booking.starRating}</p>
+            <p>({booking.customerRating})</p>
+            </div>
+            <p className="price">Price:<span style={{color:"#573", fontSize:"1.3rem",backgroundColor:"none",paddingLeft:"7px",fontWeight:"200"}}>{booking.pricing.perNight}<span style={{fontSize:"15PX",paddingLeft:"5px"}}>{booking.pricing.currency}</span></span>  </p>
+          </div>
+          </div>
+          <div className="facilities">
+
+            <div className="feature-amenties">
+            <div>
+            <h5>Facilities:</h5>
+            {booking?.features?.map((feature) => (
+                <ul>
+                    <li>{feature}</li>
+                  </ul>
+                
+               ))}
+               </div>
+               <div style={{marginLeft:"20px"}}>
+               <h5>amenities :</h5>
+            {booking?.amenities?.map((amenities) => (
+               <ul>
+                    <li>{amenities}</li>
+                  </ul>
+                ))}
+               </div>
+             </div>
+          </div>
+        </div>
+        </div>
+
         {/* Contact Form Section */}
         <div className="form-section">
           <form onSubmit={handleSubmit} className="contact-form">
@@ -107,49 +151,7 @@ const ContactForm = () => {
           </form>
         </div>
 
-        {/* Room Details Section */}
-        <div style={{width:"fit-content"}}>
         
-
-        <div className="room-details">
-          <h1>Room Details</h1>
-          <div style={{display:"flex", gap:"10px"}}>
-          <div className="room-img">
-            <img className='room-img' src={booking.images} alt="" srcset="" />
-          </div>
-          <div className="room-info">
-            <h3>{booking.roomType}</h3>
-            <div style={{display:"flex",fontSize:"14px"}}>
-            <p>{booking.starRating}</p>
-            <p>({booking.customerRating})</p>
-            </div>
-            <p className="price">Price:<span style={{color:"#573", fontSize:"1.3rem",backgroundColor:"none",paddingLeft:"7px",fontWeight:"200"}}>{booking.pricing.perNight}<span style={{fontSize:"15PX",paddingLeft:"5px"}}>{booking.pricing.currency}</span></span>  </p>
-          </div>
-          </div>
-          <div className="facilities">
-
-            <div className="feature-amenties">
-            <div>
-            <h5>Facilities:</h5>
-            {booking?.features?.map((feature) => (
-                <ul>
-                    <li>{feature}</li>
-                  </ul>
-                
-               ))}
-               </div>
-               <div style={{marginLeft:"20px"}}>
-               <h5>amenities :</h5>
-            {booking?.amenities?.map((amenities) => (
-               <ul>
-                    <li>{amenities}</li>
-                  </ul>
-                ))}
-               </div>
-             </div>
-          </div>
-        </div>
-        </div>
       </div>
     </div>
   );

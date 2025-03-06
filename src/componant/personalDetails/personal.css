@@ -238,4 +238,8 @@
   .submit-btn {
     padding: 0.5rem;
   }
+
+  .room-details{
+    padding: 1rem;
+  }
 }

@@ -8,15 +8,20 @@ import Single from './componant/Single/Single';
 import PersonalInfo from './componant/personalDetails/PersonalInfo';
 import Sign from './componant/SignIn/Sign';
 import LoginId from './componant/login/LoginId';
+import Wrapper from './componant/Wrapper';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-        <Route exact path='/' element={<Sign/>}/>
+        <Route exact path='/signin' element={<Sign/>}/>
         <Route exact path='/login' element={<LoginId/>}/>
-        <Route exact path='/home' element={<Home/>}/>
+        <Route exact path='/' element={
+          <Wrapper>
+            <Home/>
+          </Wrapper>
+          }/>
         <Route exact path='/about' element={<About/>}/>
         <Route exact path='/book' element={<Book/>}/>
         <Route exact path='/contact' element={<Contact/>}/>
