@@ -49,7 +49,32 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  animation: scrollring linear;
+  -webkit-animation: scrollring linear;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
 }
+
+
+@keyframes scrollring {
+  0%{
+    opacity: 0;
+    transform:translateY(500px);
+    -webkit-transform:translateY(500px);
+    -moz-transform:translateY(500px);
+    -ms-transform:translateY(500px);
+    -o-transform:translateY(500px);
+}
+  100%{
+    opacity: 1;
+    transform:translateY(0px);
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    -o-transform:translateY(0px);
+}
+}
+
 .contants {
   width: 50%;
   gap: 30px;
@@ -327,7 +352,7 @@
       .active-sep{
         width: 100%;
         display: flex;
-        margin-top: 90px;
+        margin-top: 30px;
         justify-content: center;
       }
       .h2-sub-food{
@@ -339,3 +364,45 @@
         font-family: "Tangerine", cursive;
         font-weight: 300;     
       }
+    /* .loader{
+      height: 100vh;
+      background-color: #0c2250;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      h2{
+        font-size: 90px;
+        color: white;
+      }
+    } */
+     /* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1.154;
+  position: relative;
+  background: conic-gradient(from 120deg at 50% 64%,#0000, #25b09b 1deg 120deg,#0000 121deg);
+  animation: l27-0 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+.loader:before,
+.loader:after {
+  content:'';
+  position: absolute;
+  inset:0;
+  background:inherit;
+  transform-origin: 50% 66%;
+  animation: l27-1 1.5s infinite;
+}
+.loader:after {
+  --s:-1;
+}
+@keyframes l27-0 {
+   0%,30%      {transform: rotate(0)}
+   70%         {transform: rotate(120deg)}
+   70.01%,100% {transform: rotate(360deg)}
+}
+@keyframes l27-1 {
+   0%      {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+   30%,70% {transform: rotate(calc(var(--s,1)*120deg)) translate(calc(var(--s,1)*-5px),10px)}
+   100%    {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
+}

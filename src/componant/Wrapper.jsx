@@ -19,7 +19,11 @@ function Wrapper({ children }) {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    
+    return <div style={{height:"100vh",alignItems:"center",justifyContent:"center", width:"100%",display:"flex",backgroundColor:"#e3f8f8e3",gap:"20px"}}>
+      <div class="loader"></div>
+      <h2>Loading...</h2>
+    </div>
   } else {
     if (authenticated) {
       return <>{children}</>;

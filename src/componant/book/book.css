@@ -5,13 +5,13 @@
     scroll-behavior: smooth;
 }
 .avl-rooms{
-    height: 88vh;
+    height: 100%;
     background-color: rgba(236, 216, 251, 0.999);
     width: 190vh;
     /* background-image: url("/public/Hotel project/img9.jpg"); */
     margin: auto;
     margin-top: 50px;
-    overflow: scroll;   
+    padding-bottom: 20px;  
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -33,6 +33,7 @@
     text-align: left;
     padding-left: 30px;
     padding-top: 140px;
+    /* padding-bottom: 140px;`   */
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
@@ -45,11 +46,12 @@
 }
 .room-types{
     display: flex;
+    margin: 0px;
     padding: 20px 30px 20px 30px;
     position: relative;
     /* overflow: scroll; */
     width: 95%;
-    /* height: 60vh; */
+    height: 100%;
     margin:20px 8px 6px 15px;
     border-radius: 5px;
     background-color: rgba(248, 251, 216, 0.997);

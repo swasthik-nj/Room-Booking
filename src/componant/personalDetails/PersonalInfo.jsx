@@ -1,8 +1,9 @@
 // ContactForm.jsx
 import React, { useState } from 'react';
 import './personal.css';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { rooms } from '../../data/data';
+import supabase from '../../helper/supabaseClient';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -22,11 +23,36 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+  const { error } = await supabase
+      .from('bookings') // Insert into the 'bookings' table
+      .insert([
+        {
+          // id: id, // Store the room ID for reference
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          phone: formData.phone,
+          email: formData.email,
+          checkIn: formData.checkIn,
+          checkOut: formData.checkOut,
+          roomName: booking.roomType, // Store room name
+          price: booking.pricing?.perNight || 0,
+        },
+      ]);
+
+    if (error) {
+      console.error('Error inserting data:', error.message);
+      alert('Failed to submit booking');
+    } else {
+      alert('Booking successful!');
+      setFormData({ firstName: '', lastName: '', phone: '', email: '', checkIn: '', checkOut: '',roomName:'',price:'' });
+      navigate("/book-conformed");
+    }
   };
 
+  const navigate = useNavigate();
   const { id } = useParams("id");
   const [booking] = rooms.filter((data) => data.id === id);
 
@@ -136,18 +162,34 @@ const ContactForm = () => {
          {/* check in-out    */}
             <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <div className="check-timeout">
-          <div className="check-in">
-            <h4>Check In</h4>
-            <input type="date" name="check-in"required id="" />
-          </div>
-          <div className="check-out">
-            <h4>Check Out</h4>
-            <input type="date" name="check-out" required id="" />
-          </div>
-        </div>
-        </div>
+  <div className="check-in">
+    <h4>Check In</h4>
+    <input 
+      type="date" 
+      name="checkIn" 
+      id="checkIn"
+      value={formData.checkIn} 
+      onChange={handleChange} 
+      required 
+    />
+  </div>
+  <div className="check-out">
+    <h4>Check Out</h4>
+    <input 
+      type="date" 
+      name="checkOut" 
+      id="checkOut"
+      value={formData.checkOut} 
+      onChange={handleChange} 
+      required      
+    />
+  </div>
+</div>
 
-            <button type="submit" className="submit-btn">Submit</button>
+        </div>
+                  {/* <Link className='book-btn' onClick={OrderConfirm} to={`/booking-confirm/${room.id}`}>Book</Link> */}
+
+           <button type="submit" className="submit-btn">Submit</button>
           </form>
         </div>
 

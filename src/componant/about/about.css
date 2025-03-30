@@ -1,0 +1,563 @@
+/* About Page Styling */
+.about-page {
+    width: 100%;
+    background-color: #cbd1f6;
+    /* overflow-x: hidden; */
+  }
+  
+  .about-hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:overlay;
+  }
+  
+  .about-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    -webkit-transform: translate(-50%, -30%);
+    -moz-transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
+    -o-transform: translate(-50%, -30%);
+}
+  
+  .about-hero-content h1 {
+    font-size: 5.5rem;
+    color: #dbf9cb;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-hero-content p {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  
+  .about-section {
+    padding: 60px 8%;
+  }
+  
+  .about-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+  
+  .about-intro h2 {
+    font-size: 2.5rem;
+    color: #122346;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .about-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Marquee Animation Styling */
+  .about-facilities {
+    margin-bottom: 60px;
+  }
+  
+  .about-facilities h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #122346;
+    margin-bottom: 30px;
+    
+  }
+  
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #cbd1f6;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .marquees {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .marquees.reverse {
+    animation: marquee-reverse 30s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .facility-item, .amenity-items {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    padding: 10px 20px;
+    background-color: #cbd1f6;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    min-width: fit-content;
+  }
+  
+  .facility-icon, .amenity-icons {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .facility-icon {
+    color: #06c222;
+  }
+  
+  .amenity-icons {
+    color: #f71500;
+  }
+  
+  /* Testimonial Section */
+  .about-testimonial {
+    display: flex;
+    margin-bottom: 60px;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .testimonial-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1);
+    -webkit-filter: brightness(0.3);
+    z-index: 0;
+}
+  
+  .testimonial-content {
+    position: relative;
+    padding: 60px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .testimonial-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-quote {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-quote p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  /* Room Highlights Section */
+  .room-highlights {
+    margin-bottom: 60px;
+  }
+  
+  .room-highlights h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #122346;
+    margin-bottom: 40px;
+  }
+  
+  .room-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .room-card {
+    width: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .room-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .room-card h3 {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: #f71500;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px 0 0 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 10;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -ms-border-radius: 30px 0 0 30px;
+    -o-border-radius: 30px 0 0 30px;
+}
+  
+  .room-card.budget h3 {
+    background-color: #06c222;
+  }
+  
+  .room-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .room-card-details {
+    padding: 20px;
+  }
+  
+  .room-card-details h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #122346;
+  }
+  
+  .room-card-details p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .room-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .room-rating {
+    margin-bottom: 15px;
+  }
+  
+  .view-room-btn {
+    display: block;
+    background-color: #122346;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-room-btn:hover {
+    background-color: #0c265b;
+  }
+  
+  /* Hotel Stats Section */
+  .hotel-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #050e20;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+  }
+  
+  .stat-item {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .stat-item h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .stat-item p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 60px;
+  }
+  
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #122346;
+    margin-bottom: 40px;
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item.active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item.active .faq-question {
+    background-color: #122346;
+    color: white;
+  }
+  
+  .faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 500px;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    color: #122346;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #f71500;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(247, 21, 0, 0.3);
+  }
+  
+  .cta-button:hover {
+    background-color: #e01400;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(247, 21, 0, 0.4);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 992px) {
+    .about-hero-content h1 {
+      font-size: 3rem;
+    }
+    
+    .about-hero-content p {
+      font-size: 1.2rem;
+    }
+    
+    .about-intro h2, .testimonial-content h2, .room-highlights h2, .faq-section h2, .cta-section h2 {
+      font-size: 2rem;
+    }
+    
+    .testimonial-quote p {
+      font-size: 1.3rem;
+    }
+    
+    .room-card {
+      width: 340px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-hero {
+      height: 50vh;
+    }
+    
+    .about-hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .about-hero-content p {
+      font-size: 1rem;
+    }
+    
+    .about-section {
+      padding: 40px 5%;
+    }
+    
+    .about-intro h2, .testimonial-content h2, .room-highlights h2, .faq-section h2, .cta-section h2 {
+      font-size: 1.8rem;
+    }
+    
+    .about-intro p {
+      font-size: 1rem;
+    }
+    
+    .testimonial-content {
+      padding: 40px 20px;
+    }
+    
+    .testimonial-quote p {
+      font-size: 1.1rem;
+    }
+    
+    .hotel-stats {
+      padding: 30px 10px;
+    }
+    
+    .stat-item h3 {
+      font-size: 2.5rem;
+    }
+    
+    .stat-item p {
+      font-size: 1rem;
+    }
+    
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .about-hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .about-facilities h2, .about-intro h2, .testimonial-content h2, .room-highlights h2, .faq-section h2, .cta-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .testimonial-quote p {
+      font-size: 1rem;
+    }
+    
+    .room-card {
+      width: 100%;
+    }
+    
+    .facility-item, .amenity-item {
+      margin: 0 10px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .stat-item h3 {
+      font-size: 2rem;
+    }
+    
+    .stat-item p {
+      font-size: 0.9rem;
+    }
+    
+    .faq-question h3 {
+      font-size: 1rem;
+    }
+    
+    .faq-answer p {
+      font-size: 0.9rem;
+    }
+    
+    .cta-section p {
+      font-size: 1;
+    }
+}

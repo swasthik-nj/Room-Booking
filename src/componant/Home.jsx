@@ -4,6 +4,7 @@ import logo from "../land-img/first.webp";
 import Navbar from "./Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { rooms } from "../data/data";
+import Footer from "../footer/Footer";
 export default function Home() {
   return (
     <div>
@@ -62,9 +63,7 @@ export default function Home() {
               All facilities makes you Unforgatable memories.
             </h1>
             <h2 style={{ lineHeight: "36px", paddingLeft: "10px" }}>
-              Our hotel contain all the hybride facilties Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Aspernatur atque similique
-              vitae repellendus recusandae dicta.
+            Our hotel offers comfortable and stylish rooms for all types of travelers. Whether you're traveling alone, with family, or for business,With friendly service and a relaxing atmosphere, we make your stay enjoyable and hassle-free.
             </h2>
           </div>
           <div className="sec-grid-container">
@@ -85,8 +84,13 @@ export default function Home() {
         </div>
       </div>
       <div>
-            <h1 style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"40px"}}>Available Rooms</h1>
-      <div className="home-room-container">
+            <h1 className="scrollring" style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"40px"}}>Available Rooms</h1>
+      <div className="home-room-container"
+      style={
+        {
+          flexWrap: "wrap",
+        }
+      }>
         {rooms.slice(0,3).map((room) => (
           <Link className="to-single" to={`/single/${room.id}`}>
           <div className="first-room">
@@ -117,13 +121,15 @@ export default function Home() {
               </div >
             
           </div>
+          
           </Link>
+          
         ))}
         
         <div style={{marginTop:"30px"}}>
           <Link className="to-book" to={'/book'}>Explore more</Link>
         </div>
-      </div>
+        </div>
       </div>
      
 {/* recipe container */}
@@ -168,9 +174,9 @@ export default function Home() {
 
         <div class="img-holder">
 						<div class="imgs-grid">
-							<div class="grid grid-1"><img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"></img></div>
-							<div class="grid grid-2"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/08/Corndogs-7832ef6.jpg?quality=90&resize=556,505"></img></div>
-							<div class="grid grid-3"><img src="https://thumbs.dreamstime.com/b/navratri-upwas-thali-fasting-food-platter-consumed-ekadashi-india-hindu-religion-includes-sago-khichadi-aloo-sabji-159829566.jpg"></img></div>
+							<div class="grid grid-1"><img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="img"></img></div>
+							<div class="grid grid-2"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/08/Corndogs-7832ef6.jpg?quality=90&resize=556,505" alt="img"></img></div>
+							<div class="grid grid-3"><img src="https://thumbs.dreamstime.com/b/navratri-upwas-thali-fasting-food-platter-consumed-ekadashi-india-hindu-religion-includes-sago-khichadi-aloo-sabji-159829566.jpg"alt="img"></img></div>
 						</div>
 					</div>
         
@@ -178,6 +184,7 @@ export default function Home() {
       
     
     </div>
+    <Footer/>
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.contact-container {
+  height: 100%;
+  padding: 40px;
+  width: 30rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: rgba(107, 105, 105, 0.115);
+  box-shadow: 0 3px 10px 0 rgba(24, 25, 39, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(103, 101, 101, 0.196);
+  /* filter: blur(10px); */
+  /* -webkit-filter: blur(10px); */
+}
+.contact-img1 {
+  height: 90px;
+  width: 90px;
+  background-image: url("/public/Hotel project/swa.JPG");
+  background-repeat: no-repeat;
+  background-position: 0px 0.3px;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 10px;
+}
+.contact-img2 {
+  height: 90px;
+  width: 90px;
+  background-image: url("/public/Hotel project/img1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0.3px;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 10px;
+}
+.contact-sep {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.C-IC:hover {
+  color: #02711c;
+}

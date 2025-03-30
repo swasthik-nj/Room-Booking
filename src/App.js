@@ -9,8 +9,12 @@ import PersonalInfo from './componant/personalDetails/PersonalInfo';
 import Sign from './componant/SignIn/Sign';
 import LoginId from './componant/login/LoginId';
 import Wrapper from './componant/Wrapper';
+import Confirm from './componant/Confirm/Confirm';
+import MyBookings from './componant/mybookings/MyBookings';
+
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -27,9 +31,14 @@ function App() {
         <Route exact path='/contact' element={<Contact/>}/>
         <Route exact path='/single/:id' element={<Single/>}/>
         <Route exact path='/booking-confirm/:id' element={<PersonalInfo/>}/>
+        <Route exact path='/book-conformed' element={<Confirm/>}/>
+        <Route exact path='/mybookings' element={<MyBookings/>}/>
         </Routes>
       </BrowserRouter>
+
+      
     </div>
+    
   );
 }
 

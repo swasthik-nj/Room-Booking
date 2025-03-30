@@ -4,11 +4,15 @@ import { rooms } from "../../data/data";
 import Navbar from "../Navbar/Navbar";
 
 export default function Single() {
-  let OrderConfirm = () => alert("Are you sure Book this!");
+  const OrderConfirm = () => {
+    if (window.confirm("Are you sure you want to book this room?")) {
+      // Proceed with booking
+    }
+    
+  };
 
-  const { id } = useParams("id");
+  const { id } = useParams();
   const [singleroom] = rooms.filter((r) => r.id === id);
-
 
   return (
     <div>
@@ -16,61 +20,48 @@ export default function Single() {
       <div className="item-container" id="book-ready">
         <div
           style={{
-            height: "100%",
-            width: "190vh",
+            maxWidth: "1200px",
             margin: "auto",
-            backgroundColor: "rgb(203, 240, 247)",
-            borderRadius: "10px",
-            paddingTop: "20px",
-            paddingBottom: "40px",
+            backgroundColor: "#fafafa",
+            borderRadius: "16px",
+            padding: "30px",
+            boxShadow: "0 10px 25px rgba(15, 15, 15, 0.056)",
           }}
         >
           <div className="item-details">
             <div>
-              <img className="img-container" src={singleroom.images} alt="img" />
+              <img
+                className="img-container"
+                src={singleroom.images}
+                alt={singleroom.roomType}
+              />
             </div>
             <div className="bed-type-container">
               <div className="bed-type">
-               <marquee direction="left"> <h1
-                  style={{
-                    fontSize: "55px",
-
-                    paddingTop: "50px",
-                  }}
-                >
-                  {singleroom.roomType}
-                </h1></marquee>
+                <h1>{singleroom.roomType}</h1>
               </div>
               <div className="price-book">
                 <h2>
                   {singleroom.pricing.perNight} &#8377;
-                  <span
-                    style={{
-                      color: "#424c2ea6",
-                      fontWeight: "300",
-                      fontSize: "20px",
-                    }}
-                  >
-                    /night
-                  </span>
+                  <span>/night</span>
                 </h2>
-                <h3>Ratings :4.8</h3>
+                <h3>Ratings: 4.8 ★</h3>
               </div>
-              <div style={{ paddingTop: "40px", display: "flex", gap: "40px" }}>
-                <div>
-                  <div>icon**</div>
-                  <div>Extra Bedsheet</div>
+              <div className="amenities-container">
+                <div className="amenity-item">
+                  <div className="amenity-icon">🛏️</div>
+                  <div className="amenity-text">Extra Bedsheet</div>
                 </div>
-                <div>
-                  <div>icon**</div>
-                  <div>1 BathRoom</div>
+                <div className="amenity-item">
+                  <div className="amenity-icon">🚿</div>
+                  <div className="amenity-text">1 Bathroom</div>
                 </div>
-                <div>
-                  <div>icon**</div>
-                  <div>Dress Block</div>
+                <div className="amenity-item">
+                  <div className="amenity-icon">👔</div>
+                  <div className="amenity-text">Dress Block</div>
                 </div>
               </div>
-              <div style={{ marginTop: "70px", marginLeft: "100px" }}>
+              <div className="book-now-container">
                 <Link
                   onClick={OrderConfirm}
                   className="book-ready"
@@ -81,66 +72,68 @@ export default function Single() {
               </div>
             </div>
           </div>
-          <div style={{ padding: "0 40px 20px 40px" }}>
-            <div>
-              <h1
-                style={{
-                  fontSize: "45px",
-                  textDecoration: "underline",
-                  color: "#502c02",
-                  fontFamily: "console",
-                }}
-              >
-                More about {singleroom.roomType}
-              </h1>
-              <div style={{ paddingLeft: "50px", paddingRight: "40px" }}>
-                <p
-                  style={{
-                    paddingTop: "20px",
-                    fontSize: "26px",
-                    lineHeight: "36px",
-                  }}
-                >
-                  {singleroom.description}
-                  <span style={{ fontWeight: "300" }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Blanditiis distinctio fugiat dolore, inventore nesciunt
-                    laboriosam exercitationem at ut magni nobis. Quo, incidunt
-                    natus. Adipisci, amet cum alias quibusdam illum molestias
-                  </span>
-                </p>
-                <div>
-                  <h1
-                    style={{
-                      fontSize: "40px",
-                      paddingTop: "38px",
-                      color: "#284619",
-                    }}
-                  >
-                    Available Services
-                  </h1>
-                </div>
-                {/* <Feature /> */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    paddingTop: "170px",
-                  }}
-                >
-                  <h2>
-                    It will provide unbelievable expirience ,Click and reserve
-                    your Room--
-                  </h2>
-                  <a href="#book-ready">book(UpArrow)</a>
-                </div>
+
+          <div className="room-description-container">
+            <h1 className="description-title">
+              More about {singleroom.roomType}
+            </h1>
+            <p className="description-text">
+              {singleroom.description}
+              <span>
+                Our rooms are designed with your comfort in mind, featuring
+                premium amenities and thoughtful touches to ensure a memorable
+                stay. Enjoy the perfect blend of luxury and convenience in a
+                serene atmosphere that makes you feel right at home.
+              </span>
+            </p>
+
+            <h2 className="services-title">Available Services</h2>
+            <div className="services-container">
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Free Wi-Fi</div>
               </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Room Service</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Daily Housekeeping</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Minibar</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Breakfast Included</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Smart TV</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Air Conditioning</div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon">✓</div>
+                <div className="service-text">Work Desk</div>
+              </div>
+            </div>
+
+            <div className="bottom-cta">
+              <h2>
+                Experience luxury like never before. Book your stay today!
+              </h2>
+              <a href="#book-ready" className="scroll-top">
+                Book Now ↑
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <Footer/> */}
     </div>
   );
 }

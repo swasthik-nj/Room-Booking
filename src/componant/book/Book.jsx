@@ -3,11 +3,13 @@ import "../book/book.css"
 import { Link } from 'react-router-dom'
 import { rooms } from '../../data/data'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../../footer/Footer'
 
 export default function Book() {
   let OrderConfirm=()=>alert("Are you sure book this")
   return (
-    <div style={{paddingBottom:"20px",backgroundImage:"linear-gradient(rgba(162, 121, 208, 0.999),rgba(30, 54, 114, 0.999))",height:"100vh",overflow:"scroll"}}>
+    <div>
+    <div style={{backgroundImage:"linear-gradient(rgba(198, 158, 243, 0.999),rgba(11, 28, 74, 0.999))",height:"100%",paddingBottom:"40px"}}>
       <Navbar/>
       <div style={{paddingTop:"45px"}}>
 
@@ -73,8 +75,11 @@ export default function Book() {
             </div>
           </div>
       </div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorem sed mollitia provident numquam repudiandae repellat dicta ratione iusto. Porro rem expedita, esse ut repellendus tempora quisquam? Esse illo commodi tenetur reiciendis nihil, nesciunt repudiandae deleniti, ab exercitationem nisi nam delectus? Sunt dignissimos, harum quia error maxime sapiente a nostrum consequuntur eius mollitia ratione. Laboriosam inventore obcaecati incidunt, reiciendis reprehenderit dolor iste suscipit unde temporibus aut nobis error officia deleniti culpa vel minus tempore? Distinctio nobis hic porro aut accusantium optio, delectus eveniet quam possimus cum sint vitae, nemo ad? Libero ipsa saepe officiis sint sunt! Quidem mollitia cupiditate alias.
+      
       </div>
+      
+    </div>
+    <Footer/>
     </div>
   )
 }
