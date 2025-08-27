@@ -130,7 +130,7 @@
 
 .book-ready {
   padding: 16px 40px;
-  background: linear-gradient(135deg, #5678 0%, #38b2ac 100%);
+  background: linear-gradient(135deg, #5678 0%, #0c115d 100%);
   text-decoration: none;
   color: white;
   border-radius: 12px;
@@ -202,7 +202,7 @@
 }
 
 .service-icon {
-  color: #4fd1c5;
+  color: #0c115d;
   font-size: 20px;
 }
 
@@ -230,14 +230,14 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #4fd1c5;
+  color: #0c115d;
   font-weight: 600;
   gap: 5px;
   transition: color 0.2s ease;
 }
 
 .scroll-top:hover {
-  color: #38b2ac;
+  color: #5c5e74;
 }
 
 @media (max-width: 1200px) {
@@ -262,5 +262,107 @@
   .room-description-container {
     padding: 20px 30px;
     margin: 20px;
+  }
+}
+
+
+/* existing styles ... (keep everything you already wrote) */
+
+/* Medium screens (≤1200px) */
+@media (max-width: 1200px) {
+  .item-details {
+    justify-content: center;
+    flex-wrap: wrap; /* allow wrapping */
+  }
+
+  .img-container {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+  }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .item-details {
+    flex-direction: column; /* stack image & details */
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px 30px;
+  }
+
+  .img-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bed-type h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .price-book {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .room-description-container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .description-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .services-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .bottom-cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
+  .bed-type h1 {
+    font-size: 22px;
+  }
+
+  .price-book h2 {
+    font-size: 24px;
+  }
+
+  .price-book h3 {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .description-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+
+  .service-item {
+    justify-content: center;
+  }
+
+  .book-ready {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
   }
 }

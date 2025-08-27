@@ -37,7 +37,7 @@
 .copyright{
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 5px;
     flex-wrap: wrap;
     color: #979eab;
     font-weight: 100;
@@ -47,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    
+    list-style: none;
    
 }
  .copyright a{
@@ -72,6 +72,63 @@
     color: #98b0df;
 
 }
+.IC{
+    color: beige;
+}
 .IC:hover{
     color: rgb(250, 234, 89);
+}
+
+@media screen and (max-width: 400px) {
+    .footer-sep{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .footer-heading{
+            font-size: 22px;
+            padding-bottom: 10px    ;
+    padding-top: 0px    ;
+        }
+        span{
+            padding-top: 20px !important;
+        }
+        p{
+            font-size: 14px;
+        }
+        .IC{
+            font-size: 20px !important;
+            margin-bottom: 5px;
+        }
+        .con-details{
+            gap: 10px;
+            align-items: start;
+        }
+        .footer-nav-button{
+            height: 10px;
+            display: flex;
+            
+            align-items: end;
+        }
+        
+    }
+    .footer-con-about{
+        gap: 50px;
+    }
+    .con-details{
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .copyright{
+        p{
+            font-size: 10px;
+        }
+        li{
+            font-size: 10px;
+            padding-top: 0;
+        }
+    }
+    
 }

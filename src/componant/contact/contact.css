@@ -1,55 +1,94 @@
-.contact-container {
-  height: 100%;
-  padding: 40px;
-  width: 30rem;
-  border: 2px solid black;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  background: rgba(107, 105, 105, 0.115);
-  box-shadow: 0 3px 10px 0 rgba(24, 25, 39, 0.37);
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(103, 101, 101, 0.196);
-  /* filter: blur(10px); */
-  /* -webkit-filter: blur(10px); */
-}
-.contact-img1 {
-  height: 90px;
-  width: 90px;
-  background-image: url("/public/Hotel project/swa.JPG");
-  background-repeat: no-repeat;
-  background-position: 0px 0.3px;
-  background-size: cover;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  margin-bottom: 10px;
-}
-.contact-img2 {
-  height: 90px;
-  width: 90px;
-  background-image: url("/public/Hotel project/SUDESH.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  margin-bottom: 10px;
-}
 .contact-sep {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap; /* makes cards wrap on smaller screens */
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(6px);
+  flex: 1 1 280px; /* responsive sizing */
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-img1,
+.contact-img2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  object-position: top center; 
+}
+
+.contact-img1 {
+  background-image: url("/public/Hotel project/swa.JPG");
+}
+.contact-img2 {
+  background-image: url("/public/Hotel project/SUDESH.jpg");
+}
+
+.contact-container h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+table {
+  margin: auto;
+  text-align: left;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.C-IC {
+  font-size: 25px !important;
+  color: #000;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 .C-IC:hover {
   color: #02711c;
+  transform: scale(1.2);
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .contact-sep {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-container {
+    width: 90%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .contact-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .contact-container h2 {
+    font-size: 1.1rem;
+  }
+  table {
+    font-size: 0.9rem;
+  }
 }

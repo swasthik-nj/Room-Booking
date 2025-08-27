@@ -1,4 +1,8 @@
-/* ContactForm.css */
+:root {
+  --theme-color: #0c115d;
+}
+
+/* Container */
 .form-container {
   display: flex;
   justify-content: center;
@@ -11,30 +15,77 @@
 .content-wrapper {
   display: flex;
   width: 100%;
-  max-width: 190vh;
+  max-width: 1600px;
   gap: 20px;
 }
 
-/* Form Section - 70% width */
+/* Room Details */
+.room-details {
+  width: fit-content;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgb(97, 96, 96);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.room-details h1 {
+  color: var(--theme-color);
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+}
+
+.room-info h3 {
+  color: var(--theme-color);
+}
+
+.room-info .price {
+  color: var(--theme-color);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px;
+  margin-top: 40px;
+}
+
+.facilities h5 {
+  color: var(--theme-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.facilities li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: var(--theme-color);
+}
+
+/* Room Image */
+.room-img {
+  height: 160px;
+  width: 220px;
+  border-radius: 20px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* Form Section */
 .form-section {
-  width: 66%;
+  flex: 1;
 }
 
 .contact-form {
-  background: rgb(237, 255, 218);
+  background: #f9fff5;
   padding: 2rem;
   border-radius: 20px;
   border: 1px solid rgb(169, 169, 169);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
 
 .contact-form h2 {
   text-align: center;
-  color: #333;
+  color: var(--theme-color);
   margin-bottom: 2rem;
   font-size: 1.8rem;
 }
@@ -56,7 +107,7 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: #444;
   font-weight: 500;
 }
 
@@ -71,145 +122,59 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #a279d0;
-  box-shadow: 0 0 0 2px rgba(162, 121, 208, 0.2);
+  border-color: var(--theme-color);
+  box-shadow: 0 0 0 2px rgba(12, 17, 93, 0.2);
 }
 
+/* Check in-out */
+.check-timeout {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(97, 96, 96);
+}
+
+/* Button */
 .submit-btn {
   width: 100%;
   padding: 0.75rem;
-  background-color: #a279d0;
+  background-color: var(--theme-color);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #8f5cc4;
+  background-color: #161b8f;
 }
 
 .submit-btn:active {
   transform: translateY(1px);
 }
 
-/* Room Details Section - 30% width */
-.room-details {
-  width: fit-content;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  height: fit-content;
-  border: 1px solid rgb(97, 96, 96);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+/* ================= RESPONSIVE ================= */
+
+/* Large laptops (≤1400px) */
+@media (max-width: 1400px) {
+  .content-wrapper {
+    max-width: 1200px;
+  }
+
+  .room-img {
+    width: 180px;
+    height: 140px;
+  }
 }
 
-.room-details h1 {
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 1.1rem;
-  font-weight: 600;
-}
-
-.room-info {
-  margin-bottom: 1.5rem;
-}
-
-.room-info h4 {
-  color: #444;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.room-info .price {
-  color: #f54c4c;
-  font-size: 1rem;
-  font-weight: 600;
-  padding:5px;
-  margin-top: 40px;
-}
-.facilities{
-  /* background-color: #d8fbc4; */
-  width: 100%;
-  padding: 0 20px 10px 20px;
-  border-radius: 15px;
-  margin-top: 20px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-
-.facilities h5 {
-  color: #555;
-  padding-top: 20px;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.facilities ul {
-  list-style: none;
-  padding-top: 0;
-}
-
-.facilities li {
-  color: #666;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.facilities li::before {
-  content: "•";
-  margin-right: 0.5rem;
-  color: #841afc;
-}
-
-.check-timeout{
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  margin-bottom: 1.5rem;
-}
-
-.room-img{
-  height: 160px;
-  width: 220px;
-  border-radius: 20px;
-  margin-right:10px ;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
-
-.check-timeout{
-  background-color: #ffffff;
-  padding: 10px 40px 10px 40px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: 1px solid rgb(97, 96, 96);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-.feature-amenties{
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-
-
-/* Responsive Design */
+/* Medium laptops/tablets (≤968px) */
 @media (max-width: 968px) {
   .content-wrapper {
     flex-direction: column;
@@ -219,27 +184,59 @@
   .room-details {
     width: 100%;
   }
+
+  .check-timeout {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
 }
 
-@media (max-width: 480px) {
-  .name-row {
-    flex-direction: column;
-    gap: 0;
+/* Small tablets (≤768px) */
+@media (max-width: 768px) {
+  .contact-form h2 {
+    font-size: 1.5rem;
   }
 
+  .name-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .check-timeout {
+    padding: 15px;
+  }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
   .contact-form {
     padding: 1rem;
   }
 
   .form-group input {
-    padding: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
   .submit-btn {
-    padding: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
-  .room-details{
-    padding: 1rem;
+  .room-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Very small phones (≤360px) */
+@media (max-width: 360px) {
+  .contact-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .submit-btn {
+    font-size: 0.8rem;
   }
 }

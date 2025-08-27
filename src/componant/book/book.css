@@ -124,3 +124,178 @@
     color: white;
     background-color: rgb(173, 165, 3);
 }
+
+/* Small phones */
+@media screen and (max-width: 400px) {
+  .avl-rooms {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .avl-rooms-separator {
+    flex-direction: column;
+  }
+
+  .room-intro {
+    width: 100%;
+    height: auto;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .room-intro h2 {
+    font-size: 22px;
+    line-height: 28px;
+    padding-right: 0;
+  }
+
+  .room-intro span {
+    padding-top: 8px;
+    font-size: 12px;
+  }
+
+  .room-types {
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .room-type-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .room-detail-info {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .room-name {
+    font-size: 20px;
+  }
+
+  .by-info {
+    font-size: 13px;
+  }
+
+  .room-detail-info h3 {
+    font-size: 13px;
+  }
+
+  .view-btn,
+  .book-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Tablets (portrait & landscape) */
+@media screen and (max-width: 768px) {
+  .avl-rooms {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .avl-rooms-separator {
+    flex-direction: column;
+  }
+
+  .room-intro {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .room-intro h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .room-types {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .room-type-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .room-detail-info {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .room-name {
+    font-size: 24px;
+  }
+
+  .by-info {
+    font-size: 14px;
+  }
+
+  .view-btn,
+  .book-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+/* Desktop (large screens) */
+@media screen and (min-width: 1024px) {
+  .avl-rooms {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .avl-rooms-separator {
+    flex-direction: row;
+  }
+
+  .room-intro {
+    width: 35%;
+    height: 88vh;
+    text-align: left;
+    padding: 100px 20px;
+  }
+
+  .room-intro h2 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .room-types {
+    flex-direction: row;
+  }
+
+  .room-type-img {
+    width: 320px;
+    height: 230px;
+  }
+
+  .room-detail-info {
+    width: 70%;
+    padding-left: 30px;
+  }
+
+  .room-name {
+    font-size: 32px;
+  }
+
+  .view-btn,
+  .book-btn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
