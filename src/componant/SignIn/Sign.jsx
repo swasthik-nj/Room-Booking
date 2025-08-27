@@ -32,7 +32,6 @@ export default function Myapp() {
     setPassword("");
   };
   return (
-    
     <div style={{ height: "100%", display: "flex" }}>
       <div className="sign-img"></div>
       <div className="sign-signin">

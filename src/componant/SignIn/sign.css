@@ -16,3 +16,54 @@
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 900px) {
+  .sign-img {
+    width: 50%;
+  }
+  .sign-signin {
+    width: 50%;
+  }
+}
+@media screen and (max-width:600px){
+    .sign-img{
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+       
+    }
+    .sign-signin{
+       position: absolute;
+        backdrop-filter: blur(2px);
+         background-color: rgba(1, 1, 1, 0.878);
+        height: 100vh;
+        padding: 10px;
+       width: 100%;
+       display: flex;
+         flex-direction: column;
+         justify-content: center;
+            align-items: center;
+       h1{
+           font-size: 30px !important;
+           padding-bottom: 10px !important;
+       }
+
+       td{
+            font-size: 15px !important;
+       }
+    }
+}
+@media screen and (max-width:500px){
+    .sign-img{
+        height: 100vh;
+        width: 100%;
+        opacity: 0.5;
+       
+    }
+    .sign-signin{
+       position: absolute;
+        background-color: rgba(1, 1, 1, 0.816);
+        backdrop-filter: blur(2px);
+        height: 100vh;
+       width: 100%;
+    }
+}
