@@ -56,7 +56,7 @@
   animation-range: entry 0% cover 40%; */
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .second-part {
     height: 100%;
     padding-bottom: 20px;
@@ -97,7 +97,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .contants {
   width: 100%;
    display: flex;
@@ -125,7 +125,7 @@
   gap: 4px;
   padding: 5px; 
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
    .sec-grid-container {
       height: 35vh;
       width: 100%;
@@ -265,7 +265,7 @@
   -o-border-radius: 10px;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .nj-rooms{
     font-size: 25px !important;
   }
@@ -276,13 +276,13 @@
     }
   }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
 .to-book {
       font-size: 20px !important;
       padding: 10px 20px 10px 20px !important;
   }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
 .rec-container {
   height: 50vh;
      h1{
@@ -413,7 +413,7 @@
         margin-top: 30px;
         justify-content: center;
       }
-      @media screen and (max-width:400px){
+      @media screen and (max-width:500px){
         .active-sep{
           display: flex;
           margin-top: 0;
@@ -519,7 +519,7 @@
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .first-room {
     width: 22rem;
   }
@@ -527,7 +527,7 @@
 
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .land-img {
     height: 50vh !important  ;  
   }
