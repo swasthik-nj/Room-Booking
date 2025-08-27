@@ -12,7 +12,7 @@ export default function Footer() {
     <div className='foot-container'>
       <div className="footer-sep">
         <div className="gratitude">
-          <h1 className='footer-heading'>HOtel Name</h1>
+          <h1 className='footer-heading'>Swadhisht</h1>
           <p>Thank you so much for your valuable time</p>
           <div className='platform-icons'>
           <span style={{ display: "flex", alignItems: "center", gap:"20px", paddingTop:"30px" }}>

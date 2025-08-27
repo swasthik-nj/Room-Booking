@@ -4,6 +4,7 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .nav-bar {
@@ -41,9 +42,10 @@
   height: 85vh;
   background-color: rgb(214, 223, 196);
   display: flex;
+  flex-wrap: wrap;
   border-radius: 10px;
-  justify-content: space-between;
   overflow: hidden;
+  justify-content: space-between;
   z-index: 0;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -52,7 +54,7 @@
   animation: scrollring linear;
   -webkit-animation: scrollring linear;
   animation-timeline: view();
-  animation-range: entry 30% cover 40%;
+  animation-range: entry 0% cover 40%;
 }
 
 
@@ -81,6 +83,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: scroll;
   margin: auto;
 }
 
@@ -92,7 +95,9 @@
   width: 46%;
   gap: 4px;
   padding: 5px;
+  
 }
+
 .f-first-col {
   grid-row: 1/2;
   grid-column: 1/2;
@@ -226,12 +231,13 @@
   -o-border-radius: 10px;
 }
 .home-room-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  gap: 10px;
-  padding: 20px 65px 20px 65px;
-  background-image: linear-gradient(#122346, #0c265b);
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+   place-items: center;
+   gap: 10px;
+   padding: 20px 0px 20px 0px;
+   background-image: linear-gradient(#122346, #0c265b);
+   
 }
 
 .first-room {
@@ -245,16 +251,27 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 807px){
+  .first-room {
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 745px){
+  .first-room {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 540px){
+  .first-room {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 400px){
   .first-room {
     width: 20rem;
   }
 }
-@media screen and (max-width: 1190px){
-  .first-room {
-    width: 15rem;
-  }
-}
+
 
 .home-imgs {
   border-radius: 10px;

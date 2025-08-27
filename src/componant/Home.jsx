@@ -84,13 +84,8 @@ export default function Home() {
         </div>
       </div>
       <div>
-            <h1 className="scrollring" style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"40px"}}>Available Rooms</h1>
-      <div className="home-room-container"
-      style={
-        {
-          flexWrap: "wrap",
-        }
-      }>
+            <h1 className="scrollring" style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"30px"}}>Available Rooms</h1>
+      <div className="home-room-container">
         {rooms.slice(0,3).map((room) => (
           <Link className="to-single" to={`/single/${room.id}`}>
           <div className="first-room">

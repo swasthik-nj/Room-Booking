@@ -34,9 +34,9 @@
 .contact-img2 {
   height: 90px;
   width: 90px;
-  background-image: url("/public/Hotel project/img1.jpg");
+  background-image: url("/public/Hotel project/SUDESH.jpg");
   background-repeat: no-repeat;
-  background-position: 0px 0.3px;
+  background-position: center;
   background-size: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;

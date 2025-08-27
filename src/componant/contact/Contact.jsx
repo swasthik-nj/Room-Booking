@@ -78,7 +78,7 @@ export default function Contact() {
                 <tbody>
                   <tr>
                     <th>Email :</th>
-                    <td>swastiknj76@gmail.com</td>
+                    <td>ssudeshgowda@gmail.com</td>
                   </tr>
                   <tr>
                     <th>Ph NO :</th>

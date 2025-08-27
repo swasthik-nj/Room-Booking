@@ -57,6 +57,7 @@ const ContactForm = () => {
   const [booking] = rooms.filter((data) => data.id === id);
 
   return (
+   
     <div className="form-container">
       <div className="content-wrapper">
 {/* Room Details Section */}
@@ -191,11 +192,14 @@ const ContactForm = () => {
 
            <button type="submit" className="submit-btn">Submit</button>
           </form>
+          <h3>If you not check-in Specific date .Order will cancel within 3 hours</h3>
         </div>
 
         
       </div>
+      
     </div>
+    
   );
 };
 
