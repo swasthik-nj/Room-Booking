@@ -72,7 +72,7 @@ export default function About() {
         <Navbar />
         <div className="about-hero-content">
           <h1>About Our Hotel</h1>
-          <p>Crafting unforgettable experiences since 2010</p>
+          <p>Crafting unforgettable experiences since 2020</p>
         </div>
       </div>
       

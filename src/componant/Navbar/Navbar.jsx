@@ -159,7 +159,7 @@ export default function Navbar() {
                 >
                   <MenuItem onClick={handleClose}>
                     <Avatar />{" "}
-                    {user ? <p>{user.email}</p> : <p>Please log in</p>}
+                    {user ? <p>{user.email}</p> : <Link to={"/login"}>Please log in</Link>}
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
                     <Avatar /> My account
@@ -178,13 +178,16 @@ export default function Navbar() {
                   </MenuItem>
                 </Menu>
               </React.Fragment>
-              <Link
-                className="nav-links"
-                to={"/signin"}
-                onClick={() => setMenuOpen(false)}
-              >
-                Sign In
-              </Link>
+             {!user && (
+  <Link
+    className="nav-links"
+    to={"/signin"}
+    onClick={() => setMenuOpen(false)}
+  >
+    Sign In
+  </Link>
+)}
+
             </div>
           </div>
         </div>

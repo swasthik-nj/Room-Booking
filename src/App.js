@@ -11,34 +11,34 @@ import LoginId from './componant/login/LoginId';
 import Wrapper from './componant/Wrapper';
 import Confirm from './componant/Confirm/Confirm';
 import MyBookings from './componant/mybookings/MyBookings';
+import NotFound  from './componant/notfound/NotFound';
+
 
 
 function App() {
-  
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-        <Route exact path='/signin' element={<Sign/>}/>
-        <Route exact path='/login' element={<LoginId/>}/>
-        <Route exact path='/' element={
-          <Wrapper>
-            <Home/>
-          </Wrapper>
-          }/>
-        <Route exact path='/about' element={<About/>}/>
-        <Route exact path='/book' element={<Book/>}/>
-        <Route exact path='/contact' element={<Contact/>}/>
-        <Route exact path='/single/:id' element={<Single/>}/>
-        <Route exact path='/booking-confirm/:id' element={<PersonalInfo/>}/>
-        <Route exact path='/book-conformed' element={<Confirm/>}/>
-        <Route exact path='/mybookings' element={<MyBookings/>}/>
+          {/* Public pages (no wrapper) */}
+          <Route path="/signin" element={<Sign />} />
+          <Route path="/login" element={<LoginId />} />
+
+          {/* Protected pages (with Wrapper) */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/single/:id" element={<Wrapper><Single /></Wrapper>} />
+          <Route path="/booking-confirm/:id" element={<Wrapper><PersonalInfo /></Wrapper>} />
+          <Route path="/book-conformed" element={<Wrapper><Confirm /></Wrapper>} />
+          <Route path="/mybookings" element={<Wrapper><MyBookings /></Wrapper>} />
+
+          {/* Catch all → NotFound */}
+          <Route path="*" element={<Wrapper><NotFound /></Wrapper>} />
         </Routes>
       </BrowserRouter>
-
-      
     </div>
-    
   );
 }
 
