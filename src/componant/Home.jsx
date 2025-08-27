@@ -26,11 +26,13 @@ export default function Home() {
             src={logo}
             alt=""
             srcset=""
+            className="land-img"
             style={{
               width: "90%",
               height: "85vh",
               borderRadius: "10px",
               marginTop: "85px",
+              
             }}
           />
         </div>
@@ -84,7 +86,7 @@ export default function Home() {
         </div>
       </div>
       <div>
-            <h1 className="scrollring" style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"30px"}}>Available Rooms</h1>
+            <h1 className="nj-rooms" style={{backgroundColor:"#122346",color:"#dbd3f4",fontSize:"73px",paddingLeft:"30px"}}>Available Rooms</h1>
       <div className="home-room-container">
         {rooms.slice(0,3).map((room) => (
           <Link className="to-single" to={`/single/${room.id}`}>
@@ -120,11 +122,11 @@ export default function Home() {
           </Link>
           
         ))}
-        
-        <div style={{marginTop:"30px"}}>
+        </div>
+        <div style={{backgroundColor:"#0c265b", paddingTop:"30px", paddingLeft:"50px"}}>
           <Link className="to-book" to={'/book'}>Explore more</Link>
         </div>
-        </div>
+        
       </div>
      
 {/* recipe container */}
@@ -143,8 +145,9 @@ export default function Home() {
             display: "flex",
             justifyContent: "center",
           }}
+          className="food-content-container"
         >
-          <div style={{ width: "480px",marginTop:"0px" }}>
+          <div style={{ width: "480px",marginTop:"0px"}} className="food-content">
             <h1
               style={{
                 padding: "5px 0 40px 0",  
