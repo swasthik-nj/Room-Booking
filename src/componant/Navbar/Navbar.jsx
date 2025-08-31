@@ -13,6 +13,8 @@ import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import supabase from "../../helper/supabaseClient";
 
+import { motion, useScroll } from "motion/react"
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,8 +53,13 @@ export default function Navbar() {
     };
     fetchUser();
   }, []);
+
+
+  const {scrollYProgress} = useScroll()
+  console.log(scrollYProgress);
+  
   return (
-    <div>
+ 
       <div className="nav-container">
         <div className="nav-sep">
           <div className="logo">
@@ -191,7 +198,13 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+      <motion.div
+      animate={{}}
+      className="nav-progress"
+      style={{backgroundColor:"#45a301a6",height:'5px',width:"100%",position:"fixed",top:"4.5rem",left:"0",scaleX:scrollYProgress,transformOrigin:'left'}}>
+
+      </motion.div>
       </div>
-    </div>
+   
   );
 }

@@ -6,6 +6,8 @@
 
 .nav-container {
   position: fixed;
+  top: 0px;
+  left: 0;
   z-index: 100;
   padding: 7px 0;
   width: 100%;
@@ -118,6 +120,27 @@
   
   .nav-bars > div img {
       padding-left: 0 !important;
+  }
+
+
+}
+
+@media (max-width: 800px) {
+  .nav-progress {
+    position: fixed;
+      top: 4.2rem !important;
+  }
+}
+@media (max-width: 690px) {
+  .nav-progress {
+    position: fixed;
+      top: 4rem !important;
+  }
+}
+@media (max-width: 630px) {
+  .nav-progress {
+    /* position: fixed; */
+      top: 3.5rem !important;
   }
 }
 
