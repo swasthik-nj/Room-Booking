@@ -94,11 +94,12 @@
       transform: translateX(0);
   }
 
-  .nav-links {
+.nav-bars .nav-links {
       display: block;
       padding: 1rem 2rem;
       text-align: left; /* Changed from center to left */
       width: 100%;
+      /* font-size: 50px !important; */
   }
 
   .nav-links-user {
@@ -152,5 +153,8 @@
   
   .nav-bars {
       width: 85%;
+  }
+  .nav-links{
+    font-size: 20px !important;
   }
 }

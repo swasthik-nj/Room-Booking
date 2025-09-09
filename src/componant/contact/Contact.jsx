@@ -7,6 +7,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Footer from "../../footer/Footer";
+import LanguageIcon from '@mui/icons-material/Language';
+
 
 export default function Contact() {
   return (
@@ -49,6 +51,8 @@ export default function Contact() {
               <Link to="https://www.facebook.com/profile.php?id=100070363380180" target="_blank"><FacebookIcon className="C-IC" /></Link>
               <Link to="https://www.linkedin.com/in/swasthik-nj/" target="_blank"><LinkedInIcon className="C-IC" /></Link>
               <Link to="https://github.com/swasthik-nj" target="_blank"><GitHubIcon className="C-IC" /></Link>
+              <Link to="https://swasthik-nj-portfolio.vercel.app/" target="_blank"><LanguageIcon className="C-IC" /></Link>
+
             </span>
           </div>
 
